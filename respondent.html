@@ -1,0 +1,75 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="respondent.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+
+    <title>Respondent Login</title>
+  </head>
+  <body>
+
+    <div class="container">
+        <form action="index.html" class="login active">
+            <h2 class="title">Login with your account</h2>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email address">
+                    <i class='bx bx-envelope'></i>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-group">
+                    <input type="password" pattern=".{8,}" id="password" placeholder="Your password">
+                    <i class='bx bx-lock-alt'></i>
+                </div>
+                <span class="help-text">At least 8 characters</span>
+            </div>
+            <button type="submit" class="btn-submit">Login</button>
+            <a href="#">Forgot password?</a>
+            <p>I don't have an account. <a href="#"  onclick="switchForm('register', event)">Register</a></p>
+        </form>
+
+        <form action="#" class="register">
+            <h2 class="title">Register your account</h2>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email address">
+                    <i class='bx bx-envelope'></i>
+                </div>
+                <div class="form-group">
+                    <label for="username">Institute</label>
+                    <div class="input-group">
+                        <input type="institute" id="institute" placeholder="institute">
+                        <i class='bx bxs-school'></i>
+                    </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-group">
+                    <input type="password" pattern=".{8,}" id="password" placeholder="Your password">
+                    <i class='bx bx-lock-alt'></i>
+                </div>
+                <span class="help-text">At least 8 characters</span>
+            </div>
+            <div class="form-group">
+                <label for="confim-pass">Confirm Password</label>
+                <div class="input-group">
+                    <input type="password" id="confirm-pass" placeholder="Enter password again">
+                    <i class='bx bx-lock-alt'></i>
+                </div>
+                <span class="help-text">Confirm password must be same with password</span>
+            </div>
+            <button type="submit" class="btn-submit">Register</button>
+            <p>I already have an account. <a href="#" onclick="switchForm('login', event)">Login</a></p>
+        </form>
+    </div>
+
+     <script src="respondent.js"></script>
+  </body>
+</html>
